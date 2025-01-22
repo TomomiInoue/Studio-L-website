@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
+import { M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
+import * as React from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// 1. import `HeroUIProvider` component
+import { HeroUIProvider } from "@heroui/react";
+import { Header } from "./components/Layout/Header/Header";
+import { Footer } from "./components/Layout/Footer/Footer";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const mplusrounded1c = M_PLUS_Rounded_1c({
   subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja-jp">
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${mplusrounded1c.className}  antialiased`}
       >
-        {children}
+        <HeroUIProvider>
+          <Header />
+          {children}
+          <Footer />
+        </HeroUIProvider>
       </body>
     </html>
   );
