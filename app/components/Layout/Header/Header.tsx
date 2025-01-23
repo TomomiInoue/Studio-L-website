@@ -53,7 +53,7 @@ export const Header = () => {
                 <NavbarContent justify="end" className="flex gap-6 justify-end">
                     {menuItems.map((item) => (
                         <NavbarItem key={item.label} onClick={() => scrollToId(item.id)}
-                            className="text-primary text-base font-medium cursor-pointer hover:opacity-70"
+                            className="text-primary text-sm font-medium cursor-pointer hover:opacity-70"
                         // className={pathname === item.id ? "text-orange" : "text-secondary"}
                         >{item.label}</NavbarItem>
                     ))}
