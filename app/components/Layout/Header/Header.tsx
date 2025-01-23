@@ -11,7 +11,7 @@ export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     const [currentId, setCurrentId] = useState("top")
 
-    const handleScroll = (id: string) => {
+    const scrollToId = (id: string) => {
         //scroll to the id with smooth behavior
         const element = document.getElementById(id);
         if (element) {
@@ -35,15 +35,14 @@ export const Header = () => {
     return (
         <>
             <Navbar
-            isBlurred
+                isBlurred
                 classNames={{
-                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary", isScrolled? "bg-white backdrop-blur-lg" : "bg-white"),
+                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
                     wrapper: cn("h-[78px]  flex items-center p-4 gap-6 container px-0"),
                     content: "w-full flex items-center",
                     brand: "flex items-center gap-2",
                     item: "text-primary text-lg font-bold cursor-pointer hover:opacity-70",
-                }
-                }
+                }}
             >
                 {/* <div className="max-w-[1371px]"> */}
                 <NavbarBrand className={isScrolled ? "flex" : "hidden"}>
@@ -53,8 +52,8 @@ export const Header = () => {
                 </NavbarBrand>
                 <NavbarContent justify="end" className="flex gap-6 justify-end">
                     {menuItems.map((item) => (
-                        <NavbarItem key={item.label} onClick={() => handleScroll(item.id)}
-                        className="text-primary text-base font-medium cursor-pointer hover:opacity-70"
+                        <NavbarItem key={item.label} onClick={() => scrollToId(item.id)}
+                            className="text-primary text-base font-medium cursor-pointer hover:opacity-70"
                         // className={pathname === item.id ? "text-orange" : "text-secondary"}
                         >{item.label}</NavbarItem>
                     ))}

@@ -3,11 +3,11 @@ import { menuItemType } from "../types/type";
 export const menuItems: menuItemType[] = [
   {
     label: "ホーム",
-    id: "top",
+    id: "home",
   },
   {
     label: "スタジオLについて",
-    id: "#about",
+    id: "about",
   },
   {
     label: "料金/プログラム",
@@ -15,7 +15,7 @@ export const menuItems: menuItemType[] = [
   },
   {
     label: "よくある質問",
-    id: "QandA",
+    id: "questions",
   },
   {
     label: "アクセス",

@@ -8,7 +8,7 @@ const features = [
 
 export const Landing = () => {
     return (
-        <div className="container py-[120px] min-h-screen">
+        <div className="container py-[120px] min-h-screen" id="home">
             <div className="flex gap-[100px]">
                 {/* Left half section */}
                 <div className="flex flex-col gap-6">
