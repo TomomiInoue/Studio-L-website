@@ -1,17 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
 
 :root {
   --background: #fafafa;
-  --foreground: #5D5C5C;
+  --foreground: #5d5c5c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #5D5C5C;
+    --background: #5d5c5c;
     --foreground: #fafafa;
   }
 }
@@ -19,4 +18,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+header {
+  max-width: 1152px;
 }

@@ -37,15 +37,14 @@ export const Header = () => {
             <Navbar
                 isBlurred
                 classNames={{
-                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
-                    wrapper: cn("h-[78px]  flex items-center p-4 gap-6 container px-0"),
+                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary container px-0", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
+                    wrapper: cn("h-[78px]  flex items-center p-4 gap-6 px-0"),
                     content: "w-full flex items-center",
                     brand: "flex items-center gap-2",
                     item: "text-primary text-lg font-bold cursor-pointer hover:opacity-70",
                 }}
             >
-                {/* <div className="max-w-[1371px]"> */}
-                <NavbarBrand className={isScrolled ? "flex" : "hidden"}>
+                <NavbarBrand className={isScrolled ? "block" : "hidden"}>
                     <Link href="/">
                         <NextImage src="/logo/studio-l-logo-side.png" alt="Pilates studio L logo" width={120} height={60} />
                     </Link>

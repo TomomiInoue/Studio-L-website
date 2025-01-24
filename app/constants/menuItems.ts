@@ -10,6 +10,10 @@ export const menuItems: menuItemType[] = [
     id: "about",
   },
   {
+    label: "リフォーマーピラティス",
+    id: "reformer",
+  },
+  {
     label: "料金/プログラム",
     id: "pricing",
   },
