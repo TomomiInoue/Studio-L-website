@@ -1,6 +1,7 @@
 "use client"
 
 import { Card, CardBody, CardHeader, Chip, Tab, Tabs } from "@heroui/react";
+import { Schedule } from "../Schedule/Schedule";
 
 const priceOptions = [
     {
@@ -54,24 +55,19 @@ const priceOptions = [
 export const Pricing = () => {
     return (
         <div className="relative min-h-screen" id="pricing">
-            {/* Banner Section */}
-            <div className="relative bg-cover bg-center h-96 w-screen" style={{ backgroundImage: "url('/images/reformer.jpg')" }}>
-                {/* Absolute container for the text */}
-                <div className="absolute top-0 left-0 w-full h-full flex items-center">
-                    <div className="container mx-auto">
-                        <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
-                            料金/スケジュール
-                        </h2>
-                    </div>
-                </div>
+            <div className="container mx-auto">
+                <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
+                    料金/スケジュール
+                </h2>
             </div>
+
             <div className="container py-[56px] flex w-full flex-col items-center">
                 <Tabs aria-label="Pricing options" items={priceOptions}
                     defaultSelectedKey={priceOptions[0].category}
                     variant="solid"
                     classNames={{
-                        base: "",
-                        tabList: "flex justify-center",
+
+                        tabList: "flex justify-center px-0",
                         tabContent: "active:text-pink",
                         cursor: "cursor-pointer",
                         panel: "p-4"
@@ -82,7 +78,9 @@ export const Pricing = () => {
                         >
                             <div className="grid grid-cols-3 gap-6 mt-6">
                                 {item.options.map((option, index) => (
-                                    <Card key={index} className="bg-white p-10 rounded-3xl shadow-md">
+                                    <Card key={index}
+                                        className="bg-white p-10"
+                                    >
                                         <CardHeader>
                                             <Chip
                                                 classNames={{
@@ -110,6 +108,7 @@ export const Pricing = () => {
 
                 </Tabs>
             </div>
+            <Schedule />
         </div >
     )
 };

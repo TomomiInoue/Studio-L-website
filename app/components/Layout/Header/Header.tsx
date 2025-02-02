@@ -12,12 +12,18 @@ export const Header = () => {
     const [currentId, setCurrentId] = useState("top")
 
     const scrollToId = (id: string) => {
-        //scroll to the id with smooth behavior
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            const offset = 100; // Adjust this value based on your header height
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
         }
-    }
+    };
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 160) {
@@ -36,28 +42,31 @@ export const Header = () => {
         <>
             <Navbar
                 isBlurred
+                maxWidth="full"
                 classNames={{
-                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary container px-0", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
-                    wrapper: cn("h-[78px]  flex items-center p-4 gap-6 px-0"),
+                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary ", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
+                    wrapper: cn("h-[78px]  flex items-center p-4 gap-6 px-0 container"),
                     content: "w-full flex items-center",
                     brand: "flex items-center gap-2",
                     item: "text-primary text-lg font-bold cursor-pointer hover:opacity-70",
                 }}
             >
-                <NavbarBrand className={isScrolled ? "block" : "hidden"}>
-                    <Link href="/">
-                        <NextImage src="/logo/studio-l-logo-side.png" alt="Pilates studio L logo" width={120} height={60} />
-                    </Link>
-                </NavbarBrand>
-                <NavbarContent justify="end" className="flex gap-6 justify-end">
-                    {menuItems.map((item) => (
-                        <NavbarItem key={item.label} onClick={() => scrollToId(item.id)}
-                            className="text-primary text-sm font-medium cursor-pointer hover:opacity-70"
-                        // className={pathname === item.id ? "text-orange" : "text-secondary"}
-                        >{item.label}</NavbarItem>
-                    ))}
-                </NavbarContent>
-                {/* </div> */}
+                <div className="container flex items-center justify-center">
+                    <NavbarBrand className={isScrolled ? "block" : "hidden"}>
+                        <Link href="/">
+                            <NextImage src="/logo/studio-l-logo-side.png" alt="Pilates studio L logo" width={120} height={60} />
+                        </Link>
+                    </NavbarBrand>
+                    <NavbarContent justify="end" className="flex gap-6 justify-end">
+                        {menuItems.map((item) => (
+                            <NavbarItem key={item.label} onClick={() => scrollToId(item.id)}
+                                className="text-primary text-sm font-medium cursor-pointer hover:opacity-70"
+                            // className={pathname === item.id ? "text-orange" : "text-secondary"}
+                            >{item.label}</NavbarItem>
+                        ))}
+                    </NavbarContent>
+                    {/* </div> */}
+                </div>
             </Navbar>
             {/* <div className="md:hidden">
             <MobileHeader />

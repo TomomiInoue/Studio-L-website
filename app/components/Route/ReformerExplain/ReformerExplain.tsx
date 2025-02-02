@@ -33,18 +33,10 @@ const benefits: ReformerBenefitsType[] = [
 export const ReformerExplain = () => {
     return (
         <div className="relative min-h-screen" id="reformer">
-            {/* Banner Section */}
-            <div className="relative bg-cover bg-center h-96 w-screen" style={{ backgroundImage: "url('/images/reformer.jpg')" }}>
-                {/* Absolute container for the text */}
-                <div className="absolute top-0 left-0 w-full h-full flex items-center">
-                    <div className="container mx-auto">
-                        <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
-                            Studio Lの特徴、効果
-                        </h2>
-                    </div>
-                </div>
-            </div>
             <div className="container mx-auto py-10">
+                <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
+                    Studio Lの特徴、効果
+                </h2>
                 {benefits.map((benefit, index) => (
                     <div key={index} className="relative flex flex-col md:flex-row items-center justify-center py-10">
                         <div className="relative w-[435px] h-[435px]">

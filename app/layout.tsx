@@ -14,10 +14,15 @@ const mplusrounded1c = M_PLUS_Rounded_1c({
   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
+// const baseURL = "https://pilates-studio-l.vercel.app";
+
 export const metadata: Metadata = {
   title: "ピラティス スタジオ L:",
   description: "長野県松本市のリフォーマーピラティススタジオ",
+  metadataBase: new URL("https://pilates-studio-l.vercel.app")
 };
+
+const classNames = `${mplusrounded1c.className}  antialiased`
 
 export default function RootLayout({
   children,
@@ -25,9 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja-jp">
+    <html lang={"ja-jp"}>
+
       <body
-        className={`${mplusrounded1c.className}  antialiased`}
+        className={classNames}
       >
         <HeroUIProvider>
           <Header />
