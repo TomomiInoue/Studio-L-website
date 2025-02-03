@@ -6,15 +6,16 @@ import { menuItems } from "@/app/constants/menuItems"
 import { cn } from "@/app/lib/utils"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/react";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 
 export const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false)
-    const [currentId, setCurrentId] = useState("top")
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [currentId, setCurrentId] = useState("top");
 
     const scrollToId = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            const offset = 100; // Adjust this value based on your header height
+            const offset = 100; // Adjust based on header height
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition - offset;
 
@@ -24,14 +25,30 @@ export const Header = () => {
             });
         }
     };
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 160) {
-                setIsScrolled(true)
+                setIsScrolled(true);
             } else {
-                setIsScrolled(false)
+                setIsScrolled(false);
             }
-        }
+
+            // Detect which section is in view
+            let currentSection = "top";
+            menuItems.forEach((item) => {
+                const section = document.getElementById(item.id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 120 && rect.bottom >= 120) {
+                        currentSection = item.id;
+                    }
+                }
+            });
+
+            setCurrentId(currentSection);
+        };
+
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -59,18 +76,23 @@ export const Header = () => {
                     </NavbarBrand>
                     <NavbarContent justify="end" className="flex gap-6 justify-end">
                         {menuItems.map((item) => (
-                            <NavbarItem key={item.label} onClick={() => scrollToId(item.id)}
-                                className="text-primary text-sm font-medium cursor-pointer hover:opacity-70"
-                            // className={pathname === item.id ? "text-orange" : "text-secondary"}
-                            >{item.label}</NavbarItem>
+                            <NavbarItem
+                                key={item.label}
+                                onClick={() => scrollToId(item.id)}
+                                className={cn(
+                                    "text-primary text-sm font-medium cursor-pointer hover:opacity-70",
+                                    currentId === item.id ? "text-pink font-bold" : ""
+                                )}
+                            >
+                                {item.label}
+                            </NavbarItem>
                         ))}
+                        <Link href="https://www.instagram.com/lie_pilates/" target="_blank">
+                            <Icon icon="mdi:instagram" width="20" height="20" className="text-lightGrey" />
+                        </Link>
                     </NavbarContent>
-                    {/* </div> */}
                 </div>
             </Navbar>
-            {/* <div className="md:hidden">
-            <MobileHeader />
-        </div> */}
         </>
-    )
-}
+    );
+};

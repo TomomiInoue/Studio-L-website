@@ -48,7 +48,7 @@ const questionItems = [
 
 export const Questions = () => {
     return (
-        <div className="relative min-h-screen" id="questions">
+        <div className="relative py-[80px]" id="questions">
             <div className="container mx-auto">
                 <h2 className="text-5xl font-bold">
                     よくある質問

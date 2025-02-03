@@ -2,13 +2,13 @@ import { MapComponent } from "./Map";
 
 export const Access = () => {
     return (
-        <div className="relative min-h-screen" id="access">
+        <div className="relative py-[80px]" id="access">
             <div className="container mx-auto">
                 <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
                     アクセス
                 </h2>
 
-                <div className="py-[60px] flex gap-10">
+                <div className="py-[60px] flex gap-10 items-center">
                     <MapComponent />
                     <div className="flex flex-col gap-5">
                         <h3 className="text-3xl font-bold">Studio L</h3>
