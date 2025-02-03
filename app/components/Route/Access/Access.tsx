@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { MapComponent } from "./Map";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export const Access = () => {
     return (
@@ -17,6 +19,12 @@ export const Access = () => {
                             長野県松本市筑摩２丁目１４−３</p>
                         <p className="text-lg">TEL: 03-1234-5678</p>
                         <p className="text-lg">駐車場４台完備</p>
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg">お問い合わせはInstagramへおねがいします。</p>
+                            <Link href="https://www.instagram.com/lie_pilates/" target="_blank">
+                                <Icon icon="mdi:instagram" width="24" height="24" className="text-lightGrey" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

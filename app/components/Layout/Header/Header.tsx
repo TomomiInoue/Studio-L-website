@@ -7,6 +7,7 @@ import { cn } from "@/app/lib/utils"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { MobileHeader } from "./MobileHeader"
 
 export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -61,7 +62,7 @@ export const Header = () => {
                 isBlurred
                 maxWidth="full"
                 classNames={{
-                    base: cn("z-50 fixed top-0 h-[78px] border-b-1 border-primary ", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
+                    base: cn("hidden md:auto z-50 fixed top-0 h-[78px] border-b-1 border-primary ", isScrolled ? "bg-white backdrop-blur-lg" : "bg-white"),
                     wrapper: cn("h-[78px]  flex items-center p-4 gap-6 px-0 container"),
                     content: "w-full flex items-center",
                     brand: "flex items-center gap-2",
@@ -93,6 +94,7 @@ export const Header = () => {
                     </NavbarContent>
                 </div>
             </Navbar>
+            <MobileHeader />
         </>
     );
 };

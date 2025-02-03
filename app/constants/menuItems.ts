@@ -25,8 +25,4 @@ export const menuItems: menuItemType[] = [
     label: "アクセス",
     id: "access",
   },
-  {
-    label: "問い合わせ",
-    id: "contact",
-  },
 ];

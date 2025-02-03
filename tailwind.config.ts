@@ -31,6 +31,13 @@ export default {
         xl: "1152px",
         "2xl": "1152px",
       },
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "4rem",
+        lg: "0rem",
+        xl: "0rem",
+      },
     },
     screens: {
       sm: "640px",

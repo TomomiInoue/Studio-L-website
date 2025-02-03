@@ -20,9 +20,9 @@ const text = [
 ];
 export const About = () => {
     return (
-        <div className="container py-[120px] min-h-screen" id="about">
+        <div className="container py-12 md:py-[120px] min-h-screen" id="about">
             <h3 className="text-[56px] font-bold mb-14">Pilates Studio <span className="inline text-pink">L</span> について</h3>
-            <div className="flex gap-[122px]">
+            <div className="flex flex-col md:flex-row gap-10 lg:gap-[122px]">
                 <div className='relative w-[480px] h-full min-h-[480px]'>
                     <NextImage src="/images/studio-l-about.jpeg" alt="Studio L about image, students practicing pilates"
                         fill
