@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { MapComponent } from "./Map";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { SubHeading } from "@/app/constants/commonStyle";
 
 export const Access = () => {
     return (
         <div className="relative py-[80px]" id="access">
             <div className="container mx-auto">
-                <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
+                <h2 className={SubHeading}>
                     アクセス
                 </h2>
 

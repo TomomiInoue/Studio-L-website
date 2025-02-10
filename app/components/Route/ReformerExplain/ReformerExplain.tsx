@@ -1,3 +1,4 @@
+import { SubHeading } from "@/app/constants/commonStyle"
 import { ReformerBenefitsType } from "@/app/types/type"
 import NextImage from "next/image"
 
@@ -34,18 +35,18 @@ export const ReformerExplain = () => {
     return (
         <div className="relative min-h-screen" id="reformer">
             <div className="container mx-auto py-10">
-                <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
+                <h2 className={SubHeading}>
                     Studio Lの特徴、効果
                 </h2>
                 {benefits.map((benefit, index) => (
-                    <div key={index} className="relative flex flex-col md:flex-row items-center justify-center py-10">
+                    <div key={index} className="relative flex flex-col md:flex-row items-center justify-center py-6 md:py-10">
                         <div className="relative w-[435px] h-[435px]">
                             <NextImage src={benefit.image.src} alt={benefit.image.alt} className="w-full 
                            h-full object-cover" fill />
                         </div>
-                        <h3 className="absolute top-10 right-[20%] text-[56px] font-bold text-pink">{benefit.title}</h3>
+                        <h3 className="absolute top-5 md:top-10 xs:left-0 md:right-[20%] text-[32px] md:text-[56px] font-bold text-pink">{benefit.title}</h3>
                         <div className="md:w-1/2 md:pl-10 flex flex-col gap-6 items-center">
-                            <h4 className="text-3xl font-medium">{benefit.subTitle}</h4>
+                            <h4 className="text-[24px] md:text-[32px] font-medium">{benefit.subTitle}</h4>
                             <p className="lg:w-1/2 text-sm font-normal">{benefit.text}</p>
                         </div>
                     </div>

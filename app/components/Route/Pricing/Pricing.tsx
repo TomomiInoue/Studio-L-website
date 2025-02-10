@@ -2,6 +2,7 @@
 
 import { Card, CardBody, CardHeader, Chip, Tab, Tabs } from "@heroui/react";
 import { Schedule } from "../Schedule/Schedule";
+import { SubHeading } from "@/app/constants/commonStyle";
 
 const priceOptions = [
     {
@@ -56,7 +57,7 @@ export const Pricing = () => {
     return (
         <div className="relative min-h-screen" id="pricing">
             <div className="container mx-auto">
-                <h2 className="text-5xl font-bold text-left bg-white py-2 px-3 rounded-md bg-opacity-80 max-w-[512px]">
+                <h2 className={SubHeading}>
                     料金/スケジュール
                 </h2>
             </div>
@@ -76,7 +77,7 @@ export const Pricing = () => {
                     {(item) => (
                         <Tab key={item.category} title={item.category}
                         >
-                            <div className="grid grid-cols-3 gap-6 mt-6">
+                            <div className="grid grod-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6">
                                 {item.options.map((option, index) => (
                                     <Card key={index}
                                         className="bg-white p-10"

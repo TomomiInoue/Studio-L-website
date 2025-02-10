@@ -1,5 +1,6 @@
 "use client";
 
+import { SubHeading } from "@/app/constants/commonStyle";
 import { Accordion, AccordionItem } from "@heroui/react";
 
 const questionItems = [
@@ -50,7 +51,7 @@ export const Questions = () => {
     return (
         <div className="relative py-[80px]" id="questions">
             <div className="container mx-auto">
-                <h2 className="text-5xl font-bold">
+                <h2 className={SubHeading}>
                     よくある質問
                 </h2>
                 <div className="max-w-[800px] mx-auto">

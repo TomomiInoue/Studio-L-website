@@ -1,3 +1,4 @@
+import { SubHeading } from '@/app/constants/commonStyle';
 import NextImage from 'next/image';
 
 const text = [
@@ -21,9 +22,9 @@ const text = [
 export const About = () => {
     return (
         <div className="container py-12 md:py-[120px] min-h-screen" id="about">
-            <h3 className="text-[56px] font-bold mb-14">Pilates Studio <span className="inline text-pink">L</span> について</h3>
+            <h3 className={SubHeading}>Pilates Studio <span className="inline text-pink">L</span> について</h3>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-[122px]">
-                <div className='relative w-[480px] h-full min-h-[480px]'>
+                <div className='relative w-screen md:w-[480px] h-full min-h-[480px]'>
                     <NextImage src="/images/studio-l-about.jpeg" alt="Studio L about image, students practicing pilates"
                         fill
                         className="rounded-lg object-cover"
