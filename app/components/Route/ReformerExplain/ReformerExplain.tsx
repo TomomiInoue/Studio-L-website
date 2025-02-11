@@ -40,12 +40,14 @@ export const ReformerExplain = () => {
                 </h2>
                 {benefits.map((benefit, index) => (
                     <div key={index} className="relative flex flex-col md:flex-row items-center justify-center py-6 md:py-10">
-                        <div className="relative w-[435px] h-[435px]">
-                            <NextImage src={benefit.image.src} alt={benefit.image.alt} className="w-full 
-                           h-full object-cover" fill />
+                        <div className="relative block">
+                            <NextImage src={benefit.image.src} alt={benefit.image.alt} objectFit="cover"
+                                width={435} height={435}
+                                sizes="100vw" />
                         </div>
-                        <h3 className="absolute top-5 md:top-10 xs:left-0 md:right-[20%] text-[32px] md:text-[56px] font-bold text-pink">{benefit.title}</h3>
-                        <div className="md:w-1/2 md:pl-10 flex flex-col gap-6 items-center">
+                        <h3 className="hidden md:block absolute top-5top-10 right-[20%] text-[56px] font-bold text-pink">{benefit.title}</h3>
+                        <h3 className="w-full md:hidden text-[20px] font-bold text-pink items-start flex mt-6">{benefit.title}</h3>
+                        <div className="w-full md:w-1/2 md:pl-10 flex flex-col gap-6 items-start md:items-center">
                             <h4 className="text-[24px] md:text-[32px] font-medium">{benefit.subTitle}</h4>
                             <p className="lg:w-1/2 text-sm font-normal">{benefit.text}</p>
                         </div>

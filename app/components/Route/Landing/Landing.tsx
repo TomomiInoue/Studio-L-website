@@ -20,11 +20,14 @@ export const Landing = () => {
                     </div>
                 </div>
                 {/* Right half section */}
-                <div className='flex relative md:w-[653px] w-screen md:h-[733px] h-[420px] justify-end m-auto md:ml-auto'>
+                <div className='relative block justify-end m-auto md:ml-auto'>
                     <NextImage src="/images/studio-l-home.jpeg" alt="Studio L home image, a teacher adjusting student's posture"
                         priority
-                        fill
-                        className="rounded-lg md:rounded-tl-[250px] object-cover"
+                        width={600}
+                        height={730}
+                        objectFit='cover'
+                        sizes='100vw'
+                        className="rounded-lg md:rounded-tl-[250px]"
                     />
                 </div>
             </div>

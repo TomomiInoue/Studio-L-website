@@ -7,9 +7,8 @@ import { cn } from "@/app/lib/utils";
 export const MobileHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [currentId, setCurrentId] = React.useState("top");
-
     const scrollToId = (id: string) => {
-        setIsMenuOpen(false);
+        // setIsMenuOpen(false);
         const element = document.getElementById(id);
         if (element) {
             const offset = 100; // Adjust based on header height
@@ -47,17 +46,17 @@ export const MobileHeader = () => {
     }, []);
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="md:hidden">
-            <NavbarContent justify="start">
+        <Navbar onMenuOpenChange={setIsMenuOpen} className="md:hidden">
+            <NavbarContent>
                 <NavbarBrand>
                     <Link href="/">
                         <NextImage src="/logo/studio-l-logo-side.png" alt="Pilates studio L logo" width={120} height={60} />
                     </Link>
                 </NavbarBrand>
-            </NavbarContent>
-            <NavbarContent justify="end">
+
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="justify-self-end"
                 />
             </NavbarContent>
 
@@ -71,9 +70,7 @@ export const MobileHeader = () => {
                             currentId === item.id ? "text-pink font-bold" : ""
                         )}
                     >
-
                         {item.label}
-
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>

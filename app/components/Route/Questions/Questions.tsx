@@ -49,7 +49,7 @@ const questionItems = [
 
 export const Questions = () => {
     return (
-        <div className="relative py-[80px]" id="questions">
+        <div className="relative py-10 md:py-[80px]" id="questions">
             <div className="container mx-auto">
                 <h2 className={SubHeading}>
                     よくある質問

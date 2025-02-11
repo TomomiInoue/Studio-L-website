@@ -22,8 +22,8 @@ const priceOptions = [
             },
             {
                 title: "月4回コース",
-                price: "¥18,000",
-                description: "8回のレッスン",
+                price: "¥16,000",
+                description: "4回のレッスン",
                 chip: "集中して通いたい方におすすめ！"
             },
         ],
@@ -35,12 +35,12 @@ const priceOptions = [
                 title: "初回のみ",
                 price: "¥4,980",
                 description: "初回のみのレッスン",
-                chip: "初回限定のお得なチケット！"
+                chip: "初回限定！"
             },
             {
                 title: "ドロップイン",
                 price: "¥8,000",
-                description: "１回ごとの購入",
+                description: "都度払い",
                 chip: "気軽に始めたい方におすすめ！"
             },
             {
@@ -62,16 +62,16 @@ export const Pricing = () => {
                 </h2>
             </div>
 
-            <div className="container py-[56px] flex w-full flex-col items-center">
+            <div className="container py-6 md:py-[56px] flex w-full flex-col items-center">
                 <Tabs aria-label="Pricing options" items={priceOptions}
                     defaultSelectedKey={priceOptions[0].category}
                     variant="solid"
                     classNames={{
 
-                        tabList: "flex justify-center px-0",
-                        tabContent: "active:text-pink",
+                        tabList: "flex justify-center ",
+                        tabContent: "",
                         cursor: "cursor-pointer",
-                        panel: "p-4"
+                        panel: ""
                     }}
                 >
                     {(item) => (
@@ -80,7 +80,7 @@ export const Pricing = () => {
                             <div className="grid grod-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6">
                                 {item.options.map((option, index) => (
                                     <Card key={index}
-                                        className="bg-white p-10"
+                                        className="bg-white p-4 md:p-10 w-full"
                                     >
                                         <CardHeader>
                                             <Chip
@@ -94,11 +94,11 @@ export const Pricing = () => {
                                             </Chip>
                                         </CardHeader>
                                         <CardBody>
-                                            <h3 className="text-[32px] font-medium mb-3">{option.title}</h3>
-                                            <p className="text-sm font-light mb-6">{option.description}
+                                            <h3 className="text-6 md:text-[32px] font-medium mb-3">{option.title}</h3>
+                                            <p className="text-sm font-light mb-4 md:mb-6">{option.description}
 
                                             </p>
-                                            <p className="text-[48px] font-bold">{option.price}</p>
+                                            <p className="text-[36px] md:text-[48px] font-bold">{option.price}</p>
 
                                         </CardBody>
                                     </Card>
