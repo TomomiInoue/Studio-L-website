@@ -36,7 +36,7 @@ export const ReformerExplain = () => {
         <div className={SectionWrapper} id="reformer">
             {/* <div className="mx-auto py-10"> */}
             <h2 className={SubHeading}>
-                Studio Lはここが違う！
+                Pilates Studio Lはここが違う！
             </h2>
             {benefits.map((benefit, index) => (
                 <div key={index} className="relative flex flex-col md:flex-row items-center justify-center py-6 md:py-10">

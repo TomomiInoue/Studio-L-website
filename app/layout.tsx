@@ -14,12 +14,27 @@ const mplusrounded1c = M_PLUS_Rounded_1c({
   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-// const baseURL = "https://pilates-studio-l.vercel.app";
+const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}`;
 
 export const metadata: Metadata = {
-  title: "ピラティス スタジオ L:",
+  title: "ピラティス スタジオ L",
   description: "長野県松本市のリフォーマーピラティススタジオ",
-  metadataBase: new URL("https://pilates-studio-l.vercel.app")
+  // metadataBase: new URL(baseURL),
+  openGraph: {
+    title: 'ピラティス スタジオ L',
+    description: '長野県松本市のリフォーマーピラティススタジオ',
+    url: baseURL,
+    siteName: 'ピラティス スタジオ L',
+    images: [
+      {
+        url: '/logo/studio-l-logo-side.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
 };
 
 const classNames = `${mplusrounded1c.className}  antialiased`

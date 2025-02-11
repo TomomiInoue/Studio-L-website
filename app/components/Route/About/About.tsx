@@ -25,7 +25,7 @@ export const About = () => {
             <h3 className={SubHeading}>Pilates Studio <span className="inline text-pink">L</span> について</h3>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-[122px]">
                 <div className='relative block'>
-                    <NextImage src="/images/studio-l-about.jpeg" alt="Studio L about image, students practicing pilates"
+                    <NextImage src="/images/studio-l-about.jpeg" alt="Pilates about image, students practicing pilates"
                         width={480}
                         height={480}
                         sizes='100vw'

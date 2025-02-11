@@ -1,0 +1,1 @@
+module.exports = { siteUrl: 'https://www.pilates-studio-l.com/', generateRobotsTxt: true, };

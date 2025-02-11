@@ -15,7 +15,7 @@ export const Access = () => {
                     <MapComponent />
                 </div>
                 <div className="flex flex-col gap-5 ">
-                    <h3 className="text-xl md:text-3xl font-bold">Studio L</h3>
+                    <h3 className="text-xl md:text-3xl font-bold">Pilates Studio <span className="text-pink inline">L</span></h3>
                     <p className="text-lg">
                         〒390-0821
                         長野県松本市筑摩２丁目１４−３ 2F</p>
