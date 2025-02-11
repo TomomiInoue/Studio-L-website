@@ -1,4 +1,4 @@
-import { SubHeading } from '@/app/constants/commonStyle';
+import { SectionWrapper, SubHeading } from '@/app/constants/commonStyle';
 import NextImage from 'next/image';
 
 const text = [
@@ -21,7 +21,7 @@ const text = [
 ];
 export const About = () => {
     return (
-        <div className="container py-12 md:py-[120px] min-h-screen" id="about">
+        <div className={SectionWrapper} id="about">
             <h3 className={SubHeading}>Pilates Studio <span className="inline text-pink">L</span> について</h3>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-[122px]">
                 <div className='relative block'>

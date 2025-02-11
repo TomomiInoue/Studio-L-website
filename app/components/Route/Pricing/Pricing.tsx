@@ -2,7 +2,7 @@
 
 import { Card, CardBody, CardHeader, Chip, Tab, Tabs } from "@heroui/react";
 import { Schedule } from "../Schedule/Schedule";
-import { SubHeading } from "@/app/constants/commonStyle";
+import { SectionWrapper, SubHeading } from "@/app/constants/commonStyle";
 
 const priceOptions = [
     {
@@ -29,7 +29,7 @@ const priceOptions = [
         ],
     },
     {
-        category: "プライベートレッスン",
+        category: "パーソナルレッスン",
         options: [
             {
                 title: "初回のみ",
@@ -55,7 +55,7 @@ const priceOptions = [
 
 export const Pricing = () => {
     return (
-        <div className="relative min-h-screen" id="pricing">
+        <div className={SectionWrapper} id="pricing">
             <div className="container mx-auto">
                 <h2 className={SubHeading}>
                     料金/スケジュール

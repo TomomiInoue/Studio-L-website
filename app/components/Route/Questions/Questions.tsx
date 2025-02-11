@@ -55,7 +55,7 @@ export const Questions = () => {
                     よくある質問
                 </h2>
                 <div className="max-w-[800px] mx-auto">
-                    <Accordion variant="splitted" className="py-[56px]"
+                    <Accordion variant="splitted" className="py-8 md:py-[56px]"
                         itemClasses={{
                             title: "font-smeibold"
                         }}

@@ -8,8 +8,8 @@ const features = [
 
 export const Landing = () => {
     return (
-        <div className="container py-12 md:py-[120px] min-h-screen" id="home">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-[100px]">
+        <div className="container md:py-[120px] min-h-screen" id="home">
+            <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-[100px]">
                 {/* Left half section */}
                 <div className="flex flex-col gap-6">
                     <NextImage src="/logo/studio-l-logo-square.png" alt="Studio L logo" width={105} height={158} className='hidden md:flex' />
