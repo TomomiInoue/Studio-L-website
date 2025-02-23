@@ -6,10 +6,10 @@ const benefits: ReformerBenefitsType[] = [
     {
         title: "01. Group lessons",
         subTitle: "マシンを使ったグループレッスン",
-        text: "静岡市内では数少ないグループレッスン(最大 8 名)が行えるマシンピラティス専用スタジオです。",
+        text: "松本市では初！最大４名でマシンピラティスのレッスンをしていきます",
         image: {
-            src: "/images/reformer1.jpeg",
-            alt: "reformer1"
+            src: "/images/group.jpeg",
+            alt: "グループレッスンの様子"
         }
     },
     {
@@ -18,16 +18,16 @@ const benefits: ReformerBenefitsType[] = [
         text: "初めての方でも安心して参加できるよう、基本的な動きから丁寧に指導します。",
         image: {
             src: "/images/reformer1.jpeg",
-            alt: "reformer1"
+            alt: "細かい指導のレッスンの様子"
         }
     },
     {
         title: "03. Personal lessons",
         subTitle: "パーソナルレッスン",
-        text: "個別指導のパーソナルレッスンも行っております。",
+        text: "ゆっくりじっくり、自分だけのメニューを組んで欲しい方はこちらがオススメ！",
         image: {
-            src: "/images/reformer1.jpeg",
-            alt: "reformer1"
+            src: "/images/private.jpeg",
+            alt: "パーソナルレッスンの様子"
         }
     }
 ]

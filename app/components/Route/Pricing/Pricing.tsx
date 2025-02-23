@@ -11,7 +11,7 @@ const priceOptions = [
             {
                 title: "ドロップイン",
                 price: "¥4,500",
-                description: "1回のみのレッスン",
+                description: "都度払いレッスン",
                 chip: "気軽に始めたい方におすすめ！"
             },
             {
@@ -23,7 +23,7 @@ const priceOptions = [
             {
                 title: "月4回コース",
                 price: "¥16,000",
-                description: "4回のレッスン",
+                description: "¥4000/1回",
                 chip: "集中して通いたい方におすすめ！"
             },
         ],
@@ -32,9 +32,9 @@ const priceOptions = [
         category: "パーソナルレッスン",
         options: [
             {
-                title: "初回のみ",
+                title: "トライアル",
                 price: "¥4,980",
-                description: "初回のみのレッスン",
+                description: "初回のみの特別価格",
                 chip: "初回限定！"
             },
             {
